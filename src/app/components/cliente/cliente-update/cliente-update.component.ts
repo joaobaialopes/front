@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from '../cliente.model';
+import { ClienteService } from '../cliente.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cliente-update',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteUpdateComponent implements OnInit {
 
-  constructor() { }
+  cliente!: Cliente;
+
+  constructor(private clienteService: ClienteService, 
+    private router: Router, 
+    private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    const clId = this.route.snapshot.paramMap.get('clId')
+    this.clienteService.readById(clId!).subscribe((cliente: Cliente) =>{
+      this.cliente = cliente
+    })
+  }
+
+  updateCliente(): void {
+    this.clienteService.update(this.cliente).subscribe(() => {
+      this.clienteService.showMessage('Cliente atualizado com sucesso!')
+      this.router.navigate(['/cliente'])
+    })
+  }
+
+  cancel(): void {
+    this.router.navigate(['/cliente'])
   }
 
 }

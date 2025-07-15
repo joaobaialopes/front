@@ -1,1 +1,38 @@
-<p>cliente-create works!</p>
+<mat-card>
+    <mat-card-title>Novo Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.clNome" name="clNome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Idade" [(ngModel)]="cliente.clIdade" name="clIdade">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="cliente.clEmail" name="clEmail">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="cliente.clTelefone" name="clTelefone">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="cliente.clCPF" name="clCPF">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="cliente.clEndereco" name="clEndereco">
+        </mat-form-field>
+        
+    </form>
+
+    <button mat-raised-button (click)="createCliente()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>

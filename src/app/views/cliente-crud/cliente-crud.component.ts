@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cliente-crud',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteCrudComponent implements OnInit {
 
-  constructor() { }
+   //construtor para configurar botao para tela de produto
+   constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
-}
+   ngOnInit(): void {
+   }
+ 
+   //criando interação com botoes
+   navigateToClienteCreate(): void{
+     this.router.navigate(['/cliente/create'])
+   }
+ 
+ }
+ 

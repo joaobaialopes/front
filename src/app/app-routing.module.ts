@@ -5,10 +5,11 @@ import {ProductCrudComponent} from  './views/product-crud/product-crud.component
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-pagamento-crud.component';
-import { FormaPagamentoCreateComponent } from './components/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
-import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
-import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
+import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+
 
 
 
@@ -39,20 +40,20 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "fpagamentos",
-    component: FormaPagamentoCrudComponent
+    path: "cliente",
+    component: ClienteCrudComponent
   },
   {
-    path: "fpagamentos/create",
-    component: FormaPagamentoCreateComponent
+    path: "cliente/create",
+    component: ClienteCreateComponent
   },
   {
-    path: "fpagamentos/update/:fpgId",
-    component: FormaPagamentoUpdateComponent
+    path: "cliente/update/:fpgId",
+    component: ClienteUpdateComponent
   },
   {
-    path: "fpagamentos/delete/:fpgId",
-    component: FormaPagamentoDeleteComponent
+    path: "cliente/delete/:fpgId",
+    component: ClienteDeleteComponent
   }
   
 ];

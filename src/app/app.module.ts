@@ -36,11 +36,6 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import { FormaPagamentoReadComponent } from './components/formaPagamento/forma-pagamento-read/forma-pagamento-read.component';
-import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-pagamento-crud.component';
-import { FormaPagamentoCreateComponent } from './components/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
-import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
-import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
 import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-read.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
@@ -62,11 +57,6 @@ registerLocaleData(localePt)
     ProductReadComponent,
     ProductUpdateComponent,
     ProductDeleteComponent,
-    FormaPagamentoReadComponent,
-    FormaPagamentoCrudComponent,
-    FormaPagamentoCreateComponent,
-    FormaPagamentoDeleteComponent,
-    FormaPagamentoUpdateComponent,
     ClienteReadComponent,
     ClienteCreateComponent,
     ClienteUpdateComponent,
