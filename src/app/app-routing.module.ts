@@ -48,11 +48,11 @@ const routes: Routes = [
     component: ClienteCreateComponent
   },
   {
-    path: "cliente/update/:fpgId",
+    path: "cliente/update/:cliId",
     component: ClienteUpdateComponent
   },
   {
-    path: "cliente/delete/:fpgId",
+    path: "cliente/delete/:cliId",
     component: ClienteDeleteComponent
   }
   

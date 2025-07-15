@@ -18,14 +18,14 @@ export class ClienteDeleteComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const clId = this.route.snapshot.paramMap.get('clId');
-    this.clienteService.readById(clId!).subscribe(cliente =>{
+    const cliId = this.route.snapshot.paramMap.get('cliId');
+    this.clienteService.readById(cliId!).subscribe(cliente =>{
       this.cliente = cliente
     })
   }
 
   deleteCliente(): void {
-    this.clienteService.delete(this.cliente.clId!).subscribe(() =>{
+    this.clienteService.delete(this.cliente.cliId!).subscribe(() =>{
     this.clienteService.showMessage('Cliente excluido com sucesso!')  
     this.router.navigate(['/cliente'])
     })

@@ -17,8 +17,8 @@ export class ClienteUpdateComponent implements OnInit {
     private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const clId = this.route.snapshot.paramMap.get('clId')
-    this.clienteService.readById(clId!).subscribe((cliente: Cliente) =>{
+    const cliId = this.route.snapshot.paramMap.get('cliId')
+    this.clienteService.readById(cliId!).subscribe((cliente: Cliente) =>{
       this.cliente = cliente
     })
   }

@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 export class ClienteCreateComponent implements OnInit {
 
   cliente: Cliente = {
-    clNome: '',
-    clIdade: 0,
-    clEmail: '',
-    clTelefone: '',
-    clCPF: '',
-    clEndereco: ''
+    cliNome: '',
+    cliIdade: 0,
+    cliEmail: '',
+    cliTelefone: '',
+    cliCPF: '',
+    cliEndereco: ''
   }
   //importando productService
   constructor(private clienteService: ClienteService,
